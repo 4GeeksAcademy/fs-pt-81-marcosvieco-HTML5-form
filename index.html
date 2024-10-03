@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+<!--Primer div donde ira todo el codigo (no se cómo hacer para ponerle sombra a lo mismo que el ejercicio sin hacerlo de forma independiente en cada div grande)-->
+    <div class="container my-5 border border-inline-secondary rounded">
+        <!--Header-->
+        <div class="row bg-light p-2">
+            <h2>Payment from example</h2>
+        </div>
+        <!--Div con todo el body y el borde de toda esa parte-->
+        <div class="row p-3 border-top border-inline-secondary">
+            <!--Alerta-->
+            <div class="alert alert-danger" role="alert">
+                Some fields are missing
+            </div>
+            <!--Form con todos los input del body-->
+            <form class="row needs-validation p-0" novalidate>
+                <!--Primera linea de inputs-->
+                <div class="col-md-5 pb-3">
+                  <label for="validationCard" class="form-label">Card #</label>
+                  <input type="number" class="form-control" id="validationCard" placeholder="XXXXXXXXXXXXXXXX" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationCVC" class="form-label">CVC #</label>
+                  <input type="number" class="form-control" id="validationCVC" placeholder="0000" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCVC" class="form-label">Amount</label>
+                  <i class="fa-solid fa-dollar-sign"></i><input type="number" class="form-control" id="validationCVC" placeholder="Amount" required>
+                </div>
+                <!--Segunda linea de inputs-->
+                <div class="col-md-6 pb-3">
+                    <label for="validationCustom01" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="validationCustom01" required>
+                </div>
+                  <div class="col-md-6">
+                    <label for="validationCustom02" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="validationCustom02" required>
+                  </div>
+                  <!--Tercera linea de inputs-->
+                  <div class="col-md-6 pb-3">
+                    <label for="inputCity" class="form-label">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                  </div>
+                  <div class="col-md-3">
+                    <label for="inputState" class="form-label">State</label>
+                    <select id="inputState" class="form-select">
+                      <option selected>Pick a state</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="inputZip" >Postal code</label>
+                    <input type="tel" class="form-control" id="inputZip">
+                  </div>
+                  <!--div con la cuarta linea de inputs con un justify content between para que se separen-->
+                  <div class="d-flex justify-content-between">
+                    <!--Metodos de pago-->
+                    <div>
+                      <label for="paymentMethods" class="form-label">We accept:</label>
+                      <div class="paymentMethods" id="paymentMethods">
+                        <div class=" bg-secondary rounded py-1 h-25">
+                            <div class="form-check form-check-inline ms-3">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                              <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-mastercard fa-lg" style="color: white;"></i></i></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                              <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-visa fa-lg" style="color: white;"></i></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                              <label class="form-check-label" for="inlineRadio3"><i class="fa-brands fa-cc-diners-club fa-lg" style="color: white;"></i></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                              <label class="form-check-label" for="inlineRadio4"><i class="fa-brands fa-cc-amex fa-lg" style="color: white;"></i></label>
+                            </div>
+                         </div>
+                       </div>
+                      </div>
+                      <!--textarea-->
+                      <div class="w-50 ms-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <small id="emailHelp" class="form-text text-muted">Add any notes here.</small>
+                      </div>
+                  </div>
+            </form>
+         </div>
+        <div class="row bg-light p-2 border-top border-inline-secondary">
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-secondary" type="button">Cancel</button>
+            <button class="btn btn-primary" type="button">Send</button>
+          </div>
+        </div>
+    </div>   
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</body>
+</html>
